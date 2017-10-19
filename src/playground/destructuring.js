@@ -1,40 +1,45 @@
+//
+// Object destructuring
+//
+
 // const person = {
-// 	name: 'Ivan',
-// 	age: 26,
-// 	location: {
-// 		city: 'BG',
-// 		temp: 20
-// 	}
+//   name: 'Andrew',
+//   age: 27,
+//   location: {
+//     city: 'Philadelphia',
+//     temp: 88
+//   }
 // };
 
-// const { name: firstName = 'Unknown', age } = person;
-
+// const { name: firstName = 'Anonymous', age } = person;
 // console.log(`${firstName} is ${age}.`);
 
 // const { city, temp: temperature } = person.location;
-
 // if (city && temperature) {
-// 	console.log(`It's ${temperature} in ${city}`);
+//   console.log(`It's ${temperature} in ${city}.`);
 // }
 
 // const book = {
-// 	title: 'Ego is the Enemy',
-// 	author: 'Ryan Holiday',
-// 	publisher: {
-// 		name: 'Penguin'
-// 	}
+//   title: 'Ego is the Enemy',
+//   author: 'Ryan Holiday',
+//   publisher: {
+//     // name: 'Penguin'
+//   }
 // };
 
-// const { name: publisherName = 'Self-Publish' } = book.publisher;
-// console.log(publisherName);
+// const { name: publisherName = 'Self-Published' } = book.publisher;
 
-const address = [ '1299 S Juniper Street', 'Philadelphia', 'Pennsylvania', '19147' ];
+// console.log(publisherName); // Penguin, Self-Published
 
-const [ , , state ] = address;
+//
+// Array destructuring
+//
 
-console.log(`You are in ${state}`);
+// const address = ['1299 S Juniper Street', 'Philadelphia', 'Pennsylvania', '19147'];
+// const [, city, state = 'New York'] = address;
+// console.log(`You are in ${city} ${state}.`);
 
-const item = [ 'coffee (hot)', '2', '2.50', '3' ];
+const item = ['Coffee (iced)', '$3.00', '$3.50', '$3.75'];
+const [itemName, , mediumPrice] = item;
 
-const [ coffee, , priceMd ] = item;
-console.log(`A medium ${coffee} costs ${priceMd}`);
+console.log(`A medium ${itemName} costs ${mediumPrice}`);
